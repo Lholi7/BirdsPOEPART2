@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <!-- Notification TextView -->
+    <TextView
+        android:id="@+id/notificationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- RadioGroup for Metric/Imperial Selection -->
+    <RadioGroup
+        android:id="@+id/metricImperialRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notificationTextView"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <!-- Metric Radio Button -->
+        <RadioButton
+            android:id="@+id/metricRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metric (Kilometres)"
+            android:checked="true" />
+
+        <!-- Imperial Radio Button -->
+        <RadioButton
+            android:id="@+id/imperialRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imperial (Miles)" />
+    </RadioGroup>
+
+    <!-- Maximum Distance EditText -->
+    <EditText
+        android:id="@+id/maxDistanceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/metricImperialRadioGroup"
+        android:layout_marginTop="16dp"
+        android:hint="Maximum Distance (e.g., 10)"
+        android:inputType="number" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Settings"
+        android:layout_below="@+id/maxDistanceEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>
